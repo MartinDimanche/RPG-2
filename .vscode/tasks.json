@@ -7,6 +7,11 @@
             "label": "Build RPG.exe",
             "type": "shell",
             "command": "gcc ${workspaceFolder}/src/*.c -o RPG.exe"
+        },
+        {
+            "label": "Build for debug RPG.exe",
+            "type": "shell",
+            "command": "gcc -g ${workspaceFolder}/src/*.c -o RPG.exe"
         }
     ]
 }
