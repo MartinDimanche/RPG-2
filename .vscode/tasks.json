@@ -6,12 +6,12 @@
         {
             "label": "Build RPG.exe",
             "type": "shell",
-            "command": "gcc ${workspaceFolder}/src/*.c -o RPG.exe"
+            "command": "make build-window"
         },
         {
             "label": "Build for debug RPG.exe",
             "type": "shell",
-            "command": "gcc -g ${workspaceFolder}/src/*.c -o RPG.exe"
+            "command": "make debug-window"
         }
     ]
 }
