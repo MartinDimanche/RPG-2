@@ -1,17 +1,33 @@
 {
-    // See https://go.microsoft.com/fwlink/?LinkId=733558
-    // for the documentation about the tasks.json format
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build RPG.exe",
+            "label": "Release RPG",
             "type": "shell",
-            "command": "make build-window"
+            "windows":{
+                "command": "make release-window",
+            },
+            "linux":{
+                "command": "make release-linux",
+            },
         },
         {
-            "label": "Build for debug RPG.exe",
+            "label": "Build for debug RPG",
             "type": "shell",
-            "command": "make debug-window"
+            "windows":{
+            "command": "make debug-window",
+            },
+            "linux":{
+            "command": "make debug-linux",
+            },
+        },
+        {
+            "label": "clean RPG",
+            "type": "shell",
+            "windows":{
+            "command": "make clean-window",
+            },
+            "problemMatcher": []
         }
     ]
 }

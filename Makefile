@@ -1,6 +1,9 @@
-build-window:
-	gcc src\main.c src\player.c -o RPG
+release-window:
+	gcc -s src/*.c -o RPG
 	RPG
 debug-window:
-	gcc -g src\main.c src\player.c -o RPG
+	gcc -g src/*.c -o RPG
 	RPG
+debug-linux:
+	gcc -g src/*.c -o RPG
+	./RPG

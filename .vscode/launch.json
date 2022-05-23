@@ -1,22 +1,37 @@
 {
-    // Utilisez IntelliSense pour en savoir plus sur les attributs possibles.
-    // Pointez pour afficher la description des attributs existants.
-    // Pour plus d'informations, visitez : https://go.microsoft.com/fwlink/?linkid=830387
+ 
     "version": "0.2.0",
     "configurations": [
+        {
+            "name": "(Release) build RPG",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/RPG",
+            "preLaunchTask": "Release RPG",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal"
+        },
         {
             "name": "Build and debug RPG",
             "type": "cppdbg",
             "request": "launch",
-            "program": "${workspaceFolder}/RPG.exe",
-            "preLaunchTask": "Build for debug RPG.exe",
+            "program": "${workspaceFolder}/RPG",
+            "preLaunchTask": "Build for debug RPG",
             "args": [],
             "stopAtEntry": false,
-            "cwd": "${fileDirname}",
+            "cwd": "${workspaceFolder}",
             "environment": [],
-            "externalConsole": false,
+            "console": "externalTerminal",
             "MIMode": "gdb",
+            "windows": {
             "miDebuggerPath": "C:/mingw64/bin/gdb.exe",
+            },
+            "linux":{
+                "miDebuggerPath" : "/usr/bin/gdb"
+            },
             "setupCommands": [
                 {
                     "description": "Activer l'impression en mode Pretty pour gdb",
@@ -30,18 +45,5 @@
                 }
             ]
         },
-        
-        {
-            "name": "(Windows) Build and run RPG.exe",
-            "type": "cppvsdbg",
-            "request": "launch",
-            "preLaunchTask": "Build RPG.exe",
-            "program": "${workspaceFolder}/RPG.exe",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "console": "integratedTerminal",
-        }
     ]
 }
